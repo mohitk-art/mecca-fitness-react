@@ -1,0 +1,9 @@
+@import './mixins';
+
+.text-primary {
+  color: $primaryColor !important;
+}
+
+.bg-yellow {
+  background-color: #f1c204 !important;
+}

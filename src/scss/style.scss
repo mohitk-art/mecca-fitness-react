@@ -1,0 +1,353 @@
+// Your custom styles
+@import './mixins';
+@import './colors';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: $themefont;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 500;
+}
+
+h5,
+.h5 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+/* Header Start */
+@import './header';
+/* Header end */
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-overlay {
+  position: relative;
+  > * {
+    position: relative;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    background-color: #000;
+  }
+}
+
+// Top banner
+#bannerslider {
+  > [class*='carousel-control'] {
+    width: 80px;
+    > span[class*='carousel-control'] {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .carousel-item {
+    div {
+      width: 100%;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+}
+// Top banner end
+
+// Four Boxes start
+.four-boxes {
+  margin-top: -100px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 9;
+}
+
+.custom-card-box {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 25px !important;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(
+      -144deg,
+      #{$primaryColor} 15%,
+      #{$secondaryColor} 85%
+    );
+  }
+  background-color: #fff;
+  text-align: center;
+
+  > .icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+  }
+
+  > .icon-img {
+    height: 35px;
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+    object-fit: contain;
+  }
+
+  > h5 {
+    position: relative;
+    line-height: 37px;
+    font-size: 20px;
+    margin-bottom: 16px;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 50px;
+      margin: auto;
+      height: 4px;
+      background: linear-gradient(-144deg, #fcc900 15%, #ff0000 85%);
+    }
+  }
+
+  > .hover {
+    position: absolute;
+    height: calc(100% - 5px);
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    left: 0;
+    top: 100%;
+    padding: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    a {
+      color: $primaryColor;
+      font-weight: 600;
+    }
+  }
+
+  &:hover {
+    > .hover {
+      top: 5px;
+      transition: 1s;
+    }
+  }
+}
+// Four Boxes end
+
+// About image section start
+.about-image {
+  position: relative;
+  padding: 50px 50px 50px 0px;
+  > img {
+    width: 100%;
+    position: relative;
+  }
+  &::before {
+    content: '';
+    width: calc(100% - 50px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 9px solid $primaryColor;
+  }
+}
+// About Image section end
+
+.sub-title {
+  position: relative;
+  padding-left: 35px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: $primaryColor;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 3px;
+    width: 30px;
+    background-color: $primaryColor;
+    transform: translateY(-50%);
+  }
+}
+
+.sub-title1 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-right: 25px;
+  &::before,
+  &::after {
+    content: '';
+    width: 20px;
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $primaryColor;
+  }
+
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+.training-programs {
+  background-color: #000;
+  color: #fff;
+}
+
+.programs-slider-wrapper {
+  overflow: hidden;
+}
+
+.programs-slider {
+  width: 160%;
+  position: relative;
+  left: -30%;
+
+  .position-relative {
+    padding: 20px;
+    overflow: hidden;
+
+    &:hover {
+      .position-absolute {
+        bottom: 40px;
+        transition: 1s;
+        opacity: 1;
+      }
+    }
+
+    .position-absolute {
+      background: linear-gradient(-144deg, #fcc900 15%, #ff0000 85%);
+      color: #fff;
+      padding: 15px;
+      width: calc(100% - 100px);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -100px;
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+
+  .slick-dots li button:before {
+    font-size: 20px;
+    color: $primaryColor;
+  }
+}
+
+// trainer start
+.trainer {
+  position: relative;
+  margin-bottom: 60px;
+  > .hover {
+    position: absolute;
+    text-align: center;
+    background-color: #fff;
+    bottom: -40px;
+    width: calc(100% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    > .desc {
+      height: 0;
+      font-size: 14px;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+  }
+  &:hover {
+    .hover {
+      > .desc {
+        height: auto;
+        transition: 0.5s;
+        display: block;
+      }
+    }
+  }
+}
+
+.social-links {
+  a {
+    color: #000;
+    display: inline-block;
+    padding: 10px;
+  }
+}
+// trainer end
+
+// testimonals start
+.testimonials-section {
+  background-image: url(../img/testimonial-bg.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.testimonals-slider {
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 850px;
+    margin: auto;
+  }
+  .avatar {
+    position: relative;
+    width: 100px;
+    margin: auto;
+    margin-top: 35px;
+
+    > .img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: relative;
+    }
+    > .quote {
+      position: absolute;
+      left: -24px;
+      top: -13px;
+    }
+  }
+}
+// testimonials end

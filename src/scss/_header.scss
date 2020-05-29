@@ -1,0 +1,26 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  &.sticky {
+    background-color: #fff !important;
+    .nav-item {
+      .nav-link {
+        color: #000 !important;
+      }
+    }
+  }
+  .navbar-brand {
+    img {
+      max-width: 200px;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      font-weight: 500;
+      color: #fff !important;
+    }
+  }
+}
