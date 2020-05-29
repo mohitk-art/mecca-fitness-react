@@ -247,6 +247,13 @@ h5,
   position: relative;
   left: -30%;
 
+  .slick-slider {
+    padding-bottom: 20px;
+    .slick-dots {
+      bottom: 0;
+    }
+  }
+
   .position-relative {
     padding: 20px;
     overflow: hidden;

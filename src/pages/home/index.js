@@ -13,6 +13,14 @@ const Home = () => {
     slidesToScroll: 1
   };
 
+  const settings1 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
   const testimonials = [
     {
       name: 'Patrick Cortez',
@@ -282,6 +290,52 @@ const Home = () => {
         </div>
       </div>
       {/* testimonials end */}
+
+      {/* Traning Programs */}
+      <section class="training-programs py-5">
+        <h2 class="text-center">Training Programs</h2>
+        <div class="text-center mb-3">
+          <span class="sub-title1">train with experts</span>
+        </div>
+        <div class="programs-slider-wrapper">
+          <div class="programs-slider">
+            <Slider {...settings1}>
+              <div class="position-relative">
+                <img src="img/portfolio1.jpg" class="w-100" />
+                <div class="position-absolute">
+                  <h6>Boxing</h6>
+                  <h5>Boxing Training Session</h5>
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <img src="img/portfolio1.jpg" class="w-100" />
+                <div class="position-absolute">
+                  <h6>Boxing</h6>
+                  <h5>Boxing Training Session</h5>
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <img src="img/portfolio1.jpg" class="w-100" />
+                <div class="position-absolute">
+                  <h6>Boxing</h6>
+                  <h5>Boxing Training Session</h5>
+                </div>
+              </div>
+
+              <div class="position-relative">
+                <img src="img/portfolio1.jpg" class="w-100" />
+                <div class="position-absolute">
+                  <h6>Boxing</h6>
+                  <h5>Boxing Training Session</h5>
+                </div>
+              </div>
+            </Slider>
+          </div>
+        </div>
+      </section>
+      {/* Training Programs */}
     </>
   );
 };
