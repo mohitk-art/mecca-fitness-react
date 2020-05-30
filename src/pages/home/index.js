@@ -382,7 +382,7 @@ const Home = () => {
       {/* Training Programs */}
 
       {/* Latest Blogs start */}
-      <section className="latestblog py-5">
+      <section className="latestblog py-5" id="latestblog">
         <div className="container">
           <div className="text-center mb-3">
             <h2>Latest Blog Posts</h2>
