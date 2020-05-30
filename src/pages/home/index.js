@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import CustomCard from '../../components/customcard';
 import Trainer from '../../components/trainer';
 import Slider from 'react-slick';
+import CountUp from 'react-countup';
 import Footer from '../../components/Footer';
 import '../../scss/style.scss';
 
@@ -243,6 +244,16 @@ const Home = () => {
           <span className="sr-only">Next</span>
         </a>
       </div>
+      <div className="position-absolute">
+        <form className="search-form">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search Here"
+          />
+          <button className="btn1">Serach</button>
+        </form>
+      </div>
       {/* top banner end */}
 
       {/* Four Boxes start */}
@@ -302,7 +313,7 @@ const Home = () => {
       {/* About Section end */}
 
       {/* Trainers start */}
-      <section class="trainers py-5 bg-yellow">
+      <section class="trainers py-5">
         <div class="container">
           <h2 className="mb-3 text-center">Expert Trainers</h2>
           <div className="text-center mb-4">
@@ -323,6 +334,44 @@ const Home = () => {
             })}
           </div>
         </div>
+
+        {/* Counter up start */}
+        <div className="container mt-4">
+          <div className="row">
+            <div className="col-md-3 text-center mb-3">
+              <h3 className="font-weight-bold">
+                <CountUp end={100} />
+                <span className="text-primary ml-2">+</span>
+              </h3>
+              <div className="font-weight-normal">GYMS</div>
+            </div>
+
+            <div className="col-md-3 text-center mb-3">
+              <h3 className="font-weight-bold">
+                <CountUp end={200} />
+                <span className="text-primary ml-2">+</span>
+              </h3>
+              <div className="font-weight-normal">TRAINERS</div>
+            </div>
+
+            <div className="col-md-3 text-center mb-3">
+              <h3 className="font-weight-bold">
+                <CountUp end={2200} />
+                <span className="text-primary ml-2">+</span>
+              </h3>
+              <div className="font-weight-normal">EVENTS</div>
+            </div>
+
+            <div className="col-md-3 text-center mb-3">
+              <h3 className="font-weight-bold">
+                <CountUp end={2000} />
+                <span className="text-primary ml-2">+</span>
+              </h3>
+              <div className="font-weight-normal">MoF Members</div>
+            </div>
+          </div>
+        </div>
+        {/* Counter up end */}
       </section>
       {/* Trainers end */}
 

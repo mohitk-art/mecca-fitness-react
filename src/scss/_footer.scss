@@ -1,6 +1,7 @@
 @import './mixins';
 
 .main-footer {
+  background-color: #000;
   p {
     line-height: 20px;
   }
@@ -37,7 +38,7 @@
 .footer-bottom {
   color: #fff;
   font-size: 14px;
-  background-color: #000;
+  background-color: $primaryColor;
   .social-links {
     a {
       color: #fff;

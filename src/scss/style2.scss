@@ -1,5 +1,14 @@
 @import './mixins';
 
+.scaleup {
+  transition: 0.5s;
+  transform: scale(1, 1);
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.05, 1.05);
+  }
+}
+
 .customcard1 {
   position: relative;
   padding: 25px;
@@ -57,6 +66,8 @@
 // Trainer start
 .trainer2 {
   text-align: center;
+  background-color: #fff;
+  color: #000;
   > img {
     display: block;
     height: 100px;
@@ -110,7 +121,54 @@
 }
 // testimonals-slider1 end
 
-// training-programs1 start
-.training-programs1 {
+// training-programs2 start
+.training-programs2 {
+  background-color: #000;
+  color: #fff;
 }
-// training-programs1 end
+// training-programs2 end
+
+// blog-slider1 start
+.blog-slider1 {
+  .slide {
+    padding: 20px 15px;
+
+    > img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    > div {
+      position: relative;
+      background-color: #fff;
+      max-width: calc(100% - 26px);
+      margin: auto;
+      margin-top: -60px;
+      transition: 0.5s;
+      &:hover {
+        margin-top: -80px;
+        transition: 0.5s;
+      }
+    }
+
+    a.h5 {
+      color: #000;
+      display: block;
+      font-size: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+
+    a.read-more {
+      font-weight: 500;
+      color: #000;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+// blog-slider1 end

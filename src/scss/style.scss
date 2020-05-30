@@ -78,9 +78,18 @@ h5,
   .carousel-item {
     div {
       width: 100%;
-      padding-top: 200px;
-      padding-bottom: 200px;
+      padding-top: 150px;
+      padding-bottom: 250px;
     }
+  }
+
+  + .position-absolute {
+    top: 300px;
+    left: 50%;
+    z-index: 9;
+    width: 100%;
+    max-width: 500px;
+    transform: translateX(-50%);
   }
 }
 // Top banner end
@@ -97,6 +106,9 @@ h5,
   position: relative;
   overflow: hidden;
   padding: 25px 25px !important;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
   &::before {
     position: absolute;
     content: '';
@@ -111,8 +123,6 @@ h5,
       #{$secondaryColor} 85%
     );
   }
-  background-color: #fff;
-  text-align: center;
 
   > .icon {
     font-size: 35px;
@@ -123,6 +133,7 @@ h5,
     height: 35px;
     width: 100%;
     display: block;
+    filter: invert(1);
     margin-bottom: 12px;
     object-fit: contain;
   }
@@ -138,16 +149,20 @@ h5,
       width: 100%;
       max-width: 50px;
       margin: auto;
-      height: 4px;
-      background: linear-gradient(-144deg, #fcc900 15%, #ff0000 85%);
+      height: 2px;
+      background: linear-gradient(
+        -144deg,
+        #{$secondaryColor} 15%,
+        #{$primaryColor} 85%
+      );
     }
   }
 
-  > .hover {
+  > a.hover {
     position: absolute;
     height: calc(100% - 5px);
     width: 100%;
-    background-color: #000;
+    background-color: $primaryColor;
     color: #fff;
     left: 0;
     top: 100%;
@@ -157,7 +172,7 @@ h5,
     align-items: center;
     transition: 1s;
     a {
-      color: $primaryColor;
+      color: #fff;
       font-weight: 600;
     }
   }
@@ -304,12 +319,19 @@ h5,
 }
 
 // trainer start
+
+.trainers {
+  background-color: #000;
+  color: #fff;
+}
+
 .trainer {
   position: relative;
   margin-bottom: 60px;
   > .hover {
     position: absolute;
     text-align: center;
+    color: #000;
     background-color: #fff;
     bottom: -40px;
     width: calc(100% - 40px);

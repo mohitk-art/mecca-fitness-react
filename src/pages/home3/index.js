@@ -3,9 +3,9 @@ import Header from '../../components/Header';
 import CountUp from 'react-countup';
 import Slider from 'react-slick';
 import Footer from '../../components/Footer';
-import '../../scss/style2.scss';
+import '../../scss/style3.scss';
 
-const Home2 = () => {
+const Home3 = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -102,7 +102,7 @@ const Home2 = () => {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
       link: '/',
-      image: '/img/aboutimage.jpg'
+      image: ''
     },
     {
       title: 'TRAINERS',
@@ -110,7 +110,7 @@ const Home2 = () => {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
       link: '/',
-      image: 'img/blog3.jpg'
+      image: 'img/trainners.png'
     },
     {
       title: 'NUTRIONISTS',
@@ -118,7 +118,7 @@ const Home2 = () => {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
       link: '/',
-      image: 'img/blog2.jpg'
+      image: 'img/nuteritionist.png'
     },
     {
       title: 'FITNESS EVENTS',
@@ -126,7 +126,7 @@ const Home2 = () => {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
       link: '/',
-      image: 'img/blog4.jpg'
+      image: 'img/events.png'
     }
   ];
 
@@ -187,9 +187,8 @@ const Home2 = () => {
   return (
     <>
       <Header />
-
       {/* Top banner start */}
-      <div id="bannerslider" className="carousel slide" data-ride="carousel">
+      <div id="bannerslider3" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
           <div
             className="carousel-item active text-center bg-cover bg-overlay text-white"
@@ -217,9 +216,10 @@ const Home2 = () => {
             );
           })}
         </div>
+
         <a
           className="carousel-control-prev"
-          href="#bannerslider"
+          href="#bannerslider3"
           role="button"
           data-slide="prev"
         >
@@ -231,7 +231,7 @@ const Home2 = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#bannerslider"
+          href="#bannerslider3"
           role="button"
           data-slide="next"
         >
@@ -260,11 +260,16 @@ const Home2 = () => {
           {fourboxes.map(item => {
             return (
               <div class="col-md-3">
-                <div
-                  className="customcard1 animated jackInTheBox"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                >
-                  <h5>{item.title}</h5>
+                <div className="customcard3 animated jackInTheBox shadow">
+                  <h5 className="d-flex">
+                    {item.image ? (
+                      <img src={item.image} className="icon" />
+                    ) : (
+                      ''
+                    )}
+                    {item.icon ? <i className={item.icon}></i> : ''}
+                    {item.title}
+                  </h5>
                   <p className="desc">{item.description}</p>
                   <a href="" className="btn">
                     Read More
@@ -278,38 +283,40 @@ const Home2 = () => {
       {/* Four Boxes end */}
 
       {/* About Section start */}
-      <div className="container mb-5 about-section2">
-        <div className="row align-items-center">
-          <div className="col-md-7 p-5 animated fadeInRight">
-            <h2>We Are Here To Dream! Our Team Is Here Surve You.</h2>
-            <div className="sub-title">About us</div>
-            <p>
-              At vero eos et accusamus et iusto odio digni goikussimos ducimus
-              qui to bonfoe blanditiis praese. Ntium voluum deleniti atque
-              corrupti quos. of a page a reload when looking at its layout. The
-              point of using Lorem Ipsum is that it has pi motive re-or-less
-              normal distribution.
-            </p>
+      <section className="about-section3">
+        <div className="container mb-5">
+          <div className="row align-items-center">
+            <div className="col-md-7 p-5 animated fadeInRight">
+              <h2>We Are Here To Dream! Our Team Is Here Surve You.</h2>
+              <div className="sub-title">About us</div>
+              <p>
+                At vero eos et accusamus et iusto odio digni goikussimos ducimus
+                qui to bonfoe blanditiis praese. Ntium voluum deleniti atque
+                corrupti quos. of a page a reload when looking at its layout.
+                The point of using Lorem Ipsum is that it has pi motive
+                re-or-less normal distribution.
+              </p>
 
-            <a href="" className="btn btn-primary">
-              Read More
-            </a>
-          </div>
+              <a href="" className="btn btn-primary">
+                Read More
+              </a>
+            </div>
 
-          <div className="col-md-5 animated fadeInLeft">
-            <div className="two-images">
-              <img src="img/portfolio2.jpg" className="w-100 shadow" />
-              <img src="img/portfolio4.jpg" className="w-100 shadow" />
+            <div className="col-md-5 animated fadeInLeft">
+              <div className="two-images">
+                <img src="img/portfolio2.jpg" className="w-100 shadow" />
+                <img src="img/portfolio4.jpg" className="w-100 shadow" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* About Section end */}
 
       {/* Trainers start */}
       <section
-        class="trainers2 py-5 text-white bg-black"
-        style={{ backgroundImage: 'url(/img/portfolio.jpg)' }}
+        class="trainer-section3 bg-cover bg-fixed bg-overlay py-5"
+        style={{ backgroundImage: 'url(/img/portfolio4.jpg)' }}
       >
         <div class="container">
           <h2 className="mb-3 text-center">Expert Trainers</h2>
@@ -320,7 +327,7 @@ const Home2 = () => {
             {trainers.map(item => {
               return (
                 <div className="col-md-3 mb-3">
-                  <div className="shadow p-3 trainer2 scaleup">
+                  <div className="shadow p-3 trainer3 scaleup">
                     <img src={item.image} className="shadow mb-3" />
                     <h5>{item.name}</h5>
                     <div className="font-weight-normal text-primary mb-3">
@@ -431,31 +438,29 @@ const Home2 = () => {
       {/* testimonials end */}
 
       {/* Traning Programs */}
-      <section class="training-programs2 py-5">
+      <section class="training-programs3 py-5">
         <h2 class="text-center">Events</h2>
-        <div class="text-center mb-3">
+        <div class="text-center mb-4">
           <span class="sub-title1">train with experts</span>
         </div>
-        <div class="programs-slider-wrapper">
-          <div class="programs-slider">
-            <Slider {...settings1}>
-              {programs.map(item => {
-                return (
-                  <div class="position-relative">
+
+        <div className="container">
+          <div class="row">
+            {programs.map(item => {
+              return (
+                <div className="col-md-6 mb-4">
+                  <div class="programs3">
                     <img src={item.image} class="w-100" />
-                    <div class="position-absolute">
+                    <a class="position-absolute">
                       <div>
                         <h6>{item.title}</h6>
                         <h5>{item.subtitle}</h5>
                       </div>
-                      <a href="">
-                        <i class="far fa-plus-square"></i>
-                      </a>
-                    </div>
+                    </a>
                   </div>
-                );
-              })}
-            </Slider>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -500,4 +505,4 @@ const Home2 = () => {
   );
 };
 
-export default Home2;
+export default Home3;

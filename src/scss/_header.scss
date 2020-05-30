@@ -5,12 +5,7 @@
   width: 100%;
   z-index: 99999;
   &.sticky {
-    background-color: #fff !important;
-    .nav-item {
-      .nav-link {
-        color: #000 !important;
-      }
-    }
+    background-color: #000 !important;
   }
   .navbar-brand {
     img {
@@ -19,7 +14,7 @@
   }
   .nav-item {
     .nav-link {
-      font-weight: 500;
+      font-weight: 600;
       color: #fff !important;
     }
   }

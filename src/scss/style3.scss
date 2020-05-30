@@ -1,0 +1,315 @@
+@import './mixins';
+
+// Top banner
+#bannerslider3 {
+  > [class*='carousel-control'] {
+    width: 80px;
+    > span[class*='carousel-control'] {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .carousel-item {
+    div {
+      width: 100%;
+      padding-top: 150px;
+      padding-bottom: 250px;
+    }
+  }
+
+  + .position-absolute {
+    top: 300px;
+    left: 50%;
+    z-index: 9;
+    width: 100%;
+    max-width: 500px;
+    transform: translateX(-50%);
+  }
+}
+
+.search-form {
+  display: flex;
+  > input {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px 15px;
+    height: auto;
+    border: 0;
+  }
+  > .btn1 {
+    margin: 0;
+    color: #ffff;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 0 !important;
+    background-color: $primaryColor;
+  }
+}
+// Top banner end
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.scaleup {
+  transition: 0.5s;
+  transform: scale(1, 1);
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.05, 1.05);
+  }
+}
+
+.customcard3 {
+  position: relative;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: -35px;
+    top: -27px;
+    opacity: 0.4;
+    background-color: #fff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    right: 0;
+    bottom: 15px;
+    opacity: 0.4;
+    background-color: #fff;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h5 {
+    justify-content: center;
+    align-items: center;
+    > i {
+      font-size: 22px;
+      margin-right: 10px;
+    }
+
+    > img.icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      margin-right: 10px;
+      filter: invert(1);
+    }
+  }
+
+  .btn {
+    border-radius: 0;
+    background-color: $primaryColor;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.about-section3 {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 66px);
+    background-color: #000;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h2 {
+    font-size: 46px;
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .two-images {
+    > img {
+      width: 100%;
+      max-width: 90%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      &:first-child {
+        margin-left: auto;
+      }
+
+      &:last-child {
+        margin-top: -120px;
+      }
+    }
+  }
+}
+
+// Trainer start
+.trainer-section3 {
+  color: #fff;
+}
+
+.trainer3 {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  > img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #fff;
+  }
+}
+// Trainer end
+
+// testimonals-slider1 start
+.testimonals-slider1 {
+  .avatar {
+    position: relative;
+    width: 100px;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    > img {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      border-radius: 50%;
+    }
+    > i {
+      position: absolute;
+      top: -12px;
+      left: 10px;
+      font-size: 29px;
+      color: $primaryColor;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25px;
+  }
+
+  .raiting {
+    color: gold;
+    font-size: 16px;
+  }
+
+  .slick-slide {
+    padding: 20px 15px;
+  }
+}
+// testimonals-slider1 end
+
+// training-programs3 start
+.training-programs3 {
+  background-color: #000;
+  color: #fff;
+}
+.programs3 {
+  position: relative;
+  > img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  > a.position-absolute {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: #fff !important;
+    text-align: center;
+    opacity: 0;
+    // background: linear-gradient(
+    //   -144deg,
+    //   #{$secondaryColor} 15%,
+    //   #{$primaryColor} 85%
+    // );
+    background-color: #f23849bf;
+  }
+
+  &:hover {
+    > a.position-absolute {
+      opacity: 1;
+    }
+  }
+}
+// training-programs3 end
+
+// blog-slider1 start
+.blog-slider1 {
+  .slide {
+    padding: 20px 15px;
+
+    > img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    > div {
+      position: relative;
+      background-color: #fff;
+      max-width: calc(100% - 26px);
+      margin: auto;
+      margin-top: -60px;
+      transition: 0.5s;
+      &:hover {
+        margin-top: -80px;
+        transition: 0.5s;
+      }
+    }
+
+    a.h5 {
+      color: #000;
+      display: block;
+      font-size: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+
+    a.read-more {
+      font-weight: 500;
+      color: #000;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+// blog-slider1 end

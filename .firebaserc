@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "mecca-fitness",
+    "mecca-fitness": "mecca-fitness"
+  }
+}

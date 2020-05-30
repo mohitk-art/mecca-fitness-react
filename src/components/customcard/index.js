@@ -8,7 +8,7 @@ const CustomCard = ({ title, description, link, icon, image }) => {
       {title ? <h5>{title}</h5> : ''}
       {description ? <p>{description}</p> : ''}
 
-      <div className="hover">
+      <a className="hover">
         <div>
           {title ? <h5>{title}</h5> : ''}
           {link ? (
@@ -19,7 +19,7 @@ const CustomCard = ({ title, description, link, icon, image }) => {
             ''
           )}
         </div>
-      </div>
+      </a>
     </div>
   );
 };
