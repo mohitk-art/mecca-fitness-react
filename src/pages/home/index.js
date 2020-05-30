@@ -3,6 +3,8 @@ import Header from '../../components/Header';
 import CustomCard from '../../components/customcard';
 import Trainer from '../../components/trainer';
 import Slider from 'react-slick';
+import Footer from '../../components/Footer';
+import '../../scss/style.scss';
 
 const Home = () => {
   const settings = {
@@ -13,13 +15,44 @@ const Home = () => {
     slidesToScroll: 1
   };
 
+  const blogsettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  };
+
   const settings1 = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 1
   };
+
+  const blogs = [
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      image: 'img/portfolio1.jpg',
+      category: 'GET FIT'
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing eli',
+      image: 'img/blog3.jpg',
+      category: 'GET Trained'
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      image: 'img/blog2.jpg',
+      category: 'GET Healthy'
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+      image: 'img/blog4.jpg',
+      category: 'GET Motivated (member stories)'
+    }
+  ];
 
   const testimonials = [
     {
@@ -53,12 +86,12 @@ const Home = () => {
     },
     {
       title: 'The Journey Begins Here',
-      image: 'img/banner3.jpg',
+      image: 'img/portfolio4.jpg',
       subtitle: 'Motivational Energy Continuously Creating Achievement'
     },
     {
       title: 'The Journey Begins Here',
-      image: 'img/banner1.jpg',
+      image: 'img/portfolio2.jpg',
       subtitle: 'Motivational Energy Continuously Creating Achievement'
     }
   ];
@@ -126,6 +159,29 @@ const Home = () => {
       position: 'Leader',
       description:
         'non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+    }
+  ];
+
+  const programs = [
+    {
+      image: 'img/portfolio4.jpg',
+      title: 'Bodybuilding',
+      subtitle: 'Bodybuilding Training Session'
+    },
+    {
+      image: 'img/portfolio1.jpg',
+      title: 'Boxing',
+      subtitle: 'Boxing Training Session'
+    },
+    {
+      image: 'img/portfolio2.jpg',
+      title: 'Cardio Training',
+      subtitle: 'Cardio Training Session'
+    },
+    {
+      image: 'img/portfolio3.jpg',
+      title: 'Yoga',
+      subtitle: 'Yoga Training Session'
     }
   ];
 
@@ -244,7 +300,10 @@ const Home = () => {
       {/* Trainers start */}
       <section class="trainers py-5 bg-yellow">
         <div class="container">
-          <h2 className="mb-3 text-center">EXPERT TRAINERS</h2>
+          <h2 className="mb-3 text-center">Expert Trainers</h2>
+          <div className="text-center mb-4">
+            <span class="sub-title1">train with experts</span>
+          </div>
           <div className="row">
             {trainers.map(item => {
               return (
@@ -264,7 +323,7 @@ const Home = () => {
       {/* Trainers end */}
 
       {/* testimonials start */}
-      <div className="testimonials-section py-5">
+      <div className="testimonials-section">
         <div className="container">
           <h2 className="mb-3 font-weight-bold text-center text-uppercase">
             Success Stories
@@ -293,49 +352,65 @@ const Home = () => {
 
       {/* Traning Programs */}
       <section class="training-programs py-5">
-        <h2 class="text-center">Training Programs</h2>
+        <h2 class="text-center">Events</h2>
         <div class="text-center mb-3">
           <span class="sub-title1">train with experts</span>
         </div>
         <div class="programs-slider-wrapper">
           <div class="programs-slider">
             <Slider {...settings1}>
-              <div class="position-relative">
-                <img src="img/portfolio1.jpg" class="w-100" />
-                <div class="position-absolute">
-                  <h6>Boxing</h6>
-                  <h5>Boxing Training Session</h5>
-                </div>
-              </div>
-
-              <div class="position-relative">
-                <img src="img/portfolio1.jpg" class="w-100" />
-                <div class="position-absolute">
-                  <h6>Boxing</h6>
-                  <h5>Boxing Training Session</h5>
-                </div>
-              </div>
-
-              <div class="position-relative">
-                <img src="img/portfolio1.jpg" class="w-100" />
-                <div class="position-absolute">
-                  <h6>Boxing</h6>
-                  <h5>Boxing Training Session</h5>
-                </div>
-              </div>
-
-              <div class="position-relative">
-                <img src="img/portfolio1.jpg" class="w-100" />
-                <div class="position-absolute">
-                  <h6>Boxing</h6>
-                  <h5>Boxing Training Session</h5>
-                </div>
-              </div>
+              {programs.map(item => {
+                return (
+                  <div class="position-relative">
+                    <img src={item.image} class="w-100" />
+                    <div class="position-absolute">
+                      <div>
+                        <h6>{item.title}</h6>
+                        <h5>{item.subtitle}</h5>
+                      </div>
+                      <a href="">
+                        <i class="far fa-plus-square"></i>
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>
       </section>
       {/* Training Programs */}
+
+      {/* Latest Blogs start */}
+      <section className="latestblog py-5">
+        <div className="container">
+          <div className="text-center mb-3">
+            <h2>Latest Blog Posts</h2>
+            <span class="sub-title1">Our Blog</span>
+          </div>
+          <div className="blog-slider">
+            <Slider {...blogsettings}>
+              {blogs.map(item => {
+                return (
+                  <div className="p-2">
+                    <img src={item.image} className="w-100 mb-2" />
+                    <div className="sub-title mb-2">{item.category}</div>
+                    <a href="" className="h5 d-block">
+                      {item.title}
+                    </a>
+                    <a href="" className="read-more">
+                      Read More
+                    </a>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+        </div>
+      </section>
+      {/* Latest Blogs end */}
+
+      <Footer />
     </>
   );
 };
