@@ -144,16 +144,6 @@ const Footer = () => {
                 <div className="date">April 19, 2020</div>
               </div>
             </div>
-
-            <div className="footer-post">
-              <img src="/img/blog2.jpg" />
-              <div>
-                <a href="" className="h5">
-                  Pellentesque convallis, diam et feugiat volutpat
-                </a>
-                <div className="date">April 19, 2020</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

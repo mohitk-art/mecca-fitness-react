@@ -172,6 +172,15 @@ h5,
 // Four Boxes end
 
 // About image section start
+.about-section {
+  h2 {
+    font-size: 46px;
+  }
+  p {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
 .about-image {
   position: relative;
   padding: 50px 50px 50px 0px;
@@ -329,6 +338,9 @@ h5,
     color: #000;
     display: inline-block;
     padding: 10px;
+    &:hover {
+      color: $primaryColor;
+    }
   }
 }
 // trainer end
