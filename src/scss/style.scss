@@ -92,7 +92,8 @@ h5,
 }
 
 // Top banner
-#bannerslider {
+#bannerslider,
+#bannerslider3 {
   > [class*='carousel-control'] {
     width: 80px;
     > span[class*='carousel-control'] {
@@ -113,9 +114,37 @@ h5,
     top: 300px;
     left: 50%;
     z-index: 9;
-    width: 100%;
+    width: 93%;
     max-width: 500px;
     transform: translateX(-50%);
+  }
+}
+
+.search-form {
+  display: flex;
+  > input {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 10px 15px;
+    height: auto;
+    border: 0;
+  }
+  > .btn1 {
+    margin: 0;
+    color: #ffff;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 0 !important;
+    background-color: $primaryColor;
+  }
+}
+
+@media (max-width: 768px) {
+  #bannerslider,
+  #bannerslider3 {
+    + .position-absolute {
+      top: 490px;
+    }
   }
 }
 // Top banner end

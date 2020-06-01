@@ -292,7 +292,7 @@ const Home4 = () => {
         <div class="row">
           {fourboxes.map(item => {
             return (
-              <div class="col-md-3">
+              <div class="col-md-3 mb-3">
                 <div className="customcard4 animated jackInTheBox shadow-lg">
                   <div className="text-center mb-3">
                     {item.image ? (

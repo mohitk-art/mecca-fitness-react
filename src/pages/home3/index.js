@@ -11,7 +11,18 @@ const Home3 = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const blogsettings = {
@@ -19,15 +30,18 @@ const Home3 = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
-  };
-
-  const settings1 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const blogs = [
@@ -259,7 +273,7 @@ const Home3 = () => {
         <div class="row">
           {fourboxes.map(item => {
             return (
-              <div class="col-md-3">
+              <div class="col-md-3 mb-3">
                 <div className="customcard3 animated jackInTheBox shadow">
                   <h5 className="d-flex">
                     {item.image ? (

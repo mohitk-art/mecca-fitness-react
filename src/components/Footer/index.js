@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="main-footer">
+    <footer className="main-footer text-center text-sm-left">
       <div className="container py-5 text-white">
         <div className="row">
           <div className="col-md-4">
@@ -148,8 +148,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container d-flex justify-content-between align-items-center">
-          <div className="font-weight-normal">
+        <div className="container d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
+          <div className="font-weight-normal mt-2 mt-sm-0">
             Mecca Fitness © 2020. All Rights Reserved
           </div>
           <div className="social-links">

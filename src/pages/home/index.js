@@ -21,7 +21,18 @@ const Home = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const settings1 = {
@@ -261,7 +272,7 @@ const Home = () => {
         <div class="row">
           {fourboxes.map(item => {
             return (
-              <div class="col-md-3">
+              <div class="col-md-3 mb-3">
                 <CustomCard
                   title={item.title}
                   description={item.description}
