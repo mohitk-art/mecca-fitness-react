@@ -11,7 +11,18 @@ const Home4 = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const blogsettings = {
@@ -19,7 +30,18 @@ const Home4 = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const settings1 = {
@@ -27,7 +49,18 @@ const Home4 = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
   };
 
   const blogs = [
@@ -445,7 +478,7 @@ const Home4 = () => {
 
         <div className="container-fluid">
           <div class="program-slider4">
-            <Slider {...settings}>
+            <Slider {...settings1}>
               {programs.map(item => {
                 return (
                   <div className="col-md-12 mb-4">

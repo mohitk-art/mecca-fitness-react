@@ -24,6 +24,23 @@ h1 {
   }
 }
 
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  &::before {
+    color: $primaryColor;
+    font-size: 33px;
+  }
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
 h1,
 .h1,
 h2,
