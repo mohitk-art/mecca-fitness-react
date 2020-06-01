@@ -25,7 +25,7 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav ml-auto align-items-center">
             <li
               className="nav-item dropdown"
               onMouseOver={() => setDropdown(true)}
@@ -94,6 +94,12 @@ const Header = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Advertise
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="btn btn-light" href="#">
+                Sign up / Log in
               </a>
             </li>
           </ul>
