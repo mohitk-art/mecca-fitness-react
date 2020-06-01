@@ -513,7 +513,7 @@ const Home4 = () => {
                 return (
                   <div className="slide shadow">
                     <img src={item.image} />
-                    <div className="p-3 shadow">
+                    <div className="p-3">
                       <span className="badge badge-primary d-inline-block">
                         {item.category}
                       </span>
