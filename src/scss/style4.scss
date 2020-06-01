@@ -126,18 +126,40 @@
   color: #fff;
 }
 
-.trainer3 {
-  text-align: center;
-  background-color: #fff;
-  color: #000;
+.trainer4 {
+  position: relative;
+
+  &:not(:hover) {
+    .hover {
+      display: none;
+    }
+  }
+
   > img {
-    display: block;
-    height: 100px;
-    width: 100px;
-    margin: auto;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #fff;
+  }
+
+  > .hover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f23849d1;
+    .social-links {
+      a {
+        &:hover {
+          color: #000;
+        }
+      }
+    }
   }
 }
 // Trainer end

@@ -357,28 +357,32 @@ const Home4 = () => {
             {trainers.map(item => {
               return (
                 <div className="col-md-3 mb-3">
-                  <div className="shadow p-3 trainer3 scaleup">
-                    <img src={item.image} className="shadow mb-3" />
-                    <h5>{item.name}</h5>
-                    <div className="font-weight-normal text-primary mb-3">
-                      {item.position}
-                    </div>
-                    <div className="social-links">
-                      <a href="" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
+                  <div className="shadow trainer4 scaleup">
+                    <img src={item.image} />
+                    <div className="p-4 hover">
+                      <div>
+                        <h5>{item.name}</h5>
+                        <div className="font-weight-bold mb-3">
+                          {item.position}
+                        </div>
+                        <div className="social-links">
+                          <a href="" target="_blank">
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
 
-                      <a href="" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
+                          <a href="" target="_blank">
+                            <i className="fab fa-twitter"></i>
+                          </a>
 
-                      <a href="" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
+                          <a href="" target="_blank">
+                            <i className="fab fa-instagram"></i>
+                          </a>
 
-                      <a href="" target="_blank">
-                        <i className="fab fa-pinterest"></i>
-                      </a>
+                          <a href="" target="_blank">
+                            <i className="fab fa-pinterest"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -42,9 +42,9 @@
   background-color: $primaryColor;
   .social-links {
     a {
-      color: #fff;
+      color: inherit;
       &:hover {
-        color: $primaryColor;
+        color: #fff;
       }
     }
   }
