@@ -306,6 +306,12 @@
 .blog-slider4 {
   .slick-slide {
     padding: 25px 15px;
+    > div {
+      outline: 0;
+      > div {
+        outline: 0;
+      }
+    }
   }
 
   .slide {

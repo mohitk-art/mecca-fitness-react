@@ -15,6 +15,15 @@ h1 {
   font-size: 60px;
 }
 
+.slick-slide {
+  > div {
+    outline: 0;
+    > div {
+      outline: 0;
+    }
+  }
+}
+
 h1,
 .h1,
 h2,
