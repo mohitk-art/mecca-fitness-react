@@ -5,6 +5,7 @@ import Home2 from './Home2';
 import Home3 from './Home3';
 import Home4 from './Home4';
 import LoginSignup from './LoginSignup';
+import Forgot from './forgot';
 
 const Pages = () => {
   return (
@@ -15,6 +16,7 @@ const Pages = () => {
         <Route exact path="/home3" component={Home3} />
         <Route exact path="/home4" component={Home4} />
         <Route exact path="/loginsignup" component={LoginSignup} />
+        <Route exact path="/forgot" component={Forgot} />
       </Switch>
     </Router>
   );

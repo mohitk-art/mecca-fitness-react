@@ -6,7 +6,7 @@ const LoginSignupHeader = () => {
   return (
     <header className="signupheader text-center" id="myHeader">
       <Link to="/">
-        <img src={logoimage} className="logoimg" />
+        <img src={logoimage} className="logoimg" alt="" />
       </Link>
     </header>
   );

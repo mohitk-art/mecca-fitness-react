@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import CountUp from 'react-countup';
 import Slider from 'react-slick';
@@ -250,9 +251,9 @@ const Home4 = () => {
           })}
         </div>
 
-        <a
+        <Link
           className="carousel-control-prev"
-          href="#bannerslider3"
+          to="#bannerslider3"
           role="button"
           data-slide="prev"
         >
@@ -261,10 +262,10 @@ const Home4 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Previous</span>
-        </a>
-        <a
+        </Link>
+        <Link
           className="carousel-control-next"
-          href="#bannerslider3"
+          to="#bannerslider3"
           role="button"
           data-slide="next"
         >
@@ -273,7 +274,7 @@ const Home4 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Next</span>
-        </a>
+        </Link>
       </div>
       <div className="position-absolute">
         <form className="search-form">
@@ -304,7 +305,7 @@ const Home4 = () => {
                   </div>
                   <h5 className="d-flex">{item.title}</h5>
 
-                  <a href="" className="btn1 fa fa-plus"></a>
+                  <Link to="" className="btn1 fa fa-plus"></Link>
                 </div>
               </div>
             );
@@ -334,9 +335,9 @@ const Home4 = () => {
                 re-or-less normal distribution.
               </p>
 
-              <a href="" className="btn btn-primary">
+              <Link to="" className="btn btn-primary">
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -366,21 +367,21 @@ const Home4 = () => {
                           {item.position}
                         </div>
                         <div className="social-links">
-                          <a href="" target="_blank">
+                          <Link to="" target="_blank">
                             <i className="fab fa-facebook-f"></i>
-                          </a>
+                          </Link>
 
-                          <a href="" target="_blank">
+                          <Link to="" target="_blank">
                             <i className="fab fa-twitter"></i>
-                          </a>
+                          </Link>
 
-                          <a href="" target="_blank">
+                          <Link to="" target="_blank">
                             <i className="fab fa-instagram"></i>
-                          </a>
+                          </Link>
 
-                          <a href="" target="_blank">
+                          <Link to="" target="_blank">
                             <i className="fab fa-pinterest"></i>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -488,12 +489,12 @@ const Home4 = () => {
                   <div className="col-md-12 mb-4">
                     <div class="programs3">
                       <img src={item.image} class="w-100" />
-                      <a class="position-absolute">
+                      <Link to="" class="position-absolute">
                         <div>
                           <h6>{item.title}</h6>
                           <h5>{item.subtitle}</h5>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 );
@@ -522,17 +523,17 @@ const Home4 = () => {
                         {item.category}
                       </span>
 
-                      <a href="" className="h5 d-block">
+                      <Link to="" className="h5 d-block">
                         {item.title}
-                      </a>
+                      </Link>
                       <div className="mb-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua
                       </div>
-                      <a href="" className="read-more">
+                      <Link to="" className="read-more">
                         Read More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 );

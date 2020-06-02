@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Header from '../../components/Header';
 import CountUp from 'react-countup';
 import Slider from 'react-slick';
@@ -231,9 +232,9 @@ const Home3 = () => {
           })}
         </div>
 
-        <a
+        <Link
           className="carousel-control-prev"
-          href="#bannerslider3"
+          to="#bannerslider3"
           role="button"
           data-slide="prev"
         >
@@ -242,10 +243,11 @@ const Home3 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Previous</span>
-        </a>
-        <a
+        </Link>
+
+        <Link
           className="carousel-control-next"
-          href="#bannerslider3"
+          to="#bannerslider3"
           role="button"
           data-slide="next"
         >
@@ -254,7 +256,7 @@ const Home3 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Next</span>
-        </a>
+        </Link>
       </div>
       <div className="position-absolute">
         <form className="search-form">
@@ -285,9 +287,9 @@ const Home3 = () => {
                     {item.title}
                   </h5>
                   <p className="desc">{item.description}</p>
-                  <a href="" className="btn">
+                  <Link to="" className="btn">
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             );
@@ -311,9 +313,9 @@ const Home3 = () => {
                 re-or-less normal distribution.
               </p>
 
-              <a href="" className="btn btn-primary">
+              <Link to="" className="btn btn-primary">
                 Read More
-              </a>
+              </Link>
             </div>
 
             <div className="col-md-5 animated fadeInLeft">
@@ -348,21 +350,21 @@ const Home3 = () => {
                       {item.position}
                     </div>
                     <div className="social-links">
-                      <a href="" target="_blank">
+                      <Link to="" target="_blank">
                         <i className="fab fa-facebook-f"></i>
-                      </a>
+                      </Link>
 
-                      <a href="" target="_blank">
+                      <Link to="" target="_blank">
                         <i className="fab fa-twitter"></i>
-                      </a>
+                      </Link>
 
-                      <a href="" target="_blank">
+                      <Link to="" target="_blank">
                         <i className="fab fa-instagram"></i>
-                      </a>
+                      </Link>
 
-                      <a href="" target="_blank">
+                      <Link to="" target="_blank">
                         <i className="fab fa-pinterest"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -465,12 +467,12 @@ const Home3 = () => {
                 <div className="col-md-6 mb-4">
                   <div class="programs3">
                     <img src={item.image} class="w-100" />
-                    <a class="position-absolute">
+                    <Link to="" class="position-absolute">
                       <div>
                         <h6>{item.title}</h6>
                         <h5>{item.subtitle}</h5>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );
@@ -498,12 +500,13 @@ const Home3 = () => {
                         {item.category}
                       </span>
 
-                      <a href="" className="h5 d-block">
+                      <Link to="" className="h5 d-block">
                         {item.title}
-                      </a>
-                      <a href="" className="read-more">
+                      </Link>
+
+                      <Link to="" className="read-more">
                         Read More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 );

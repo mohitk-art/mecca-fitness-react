@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
     >
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src="img/logo.png" />
+          <img src="img/logo.png" alt="" />
         </Link>
 
         <button

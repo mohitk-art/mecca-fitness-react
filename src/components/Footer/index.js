@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container py-5 text-white">
         <div className="row">
           <div className="col-md-4">
-            <img src="/img/logo.png" className="footer-logo mb-3" />
+            <img src="/img/logo.png" alt="" className="footer-logo mb-3" />
             <p className="font-weight-normal">
               Pellentesque convallis, diam et feugiat volutpat, tellus ligula
               consequat augue, quis malesuada nisi ante nec metus. Sed id
