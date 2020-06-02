@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -20,25 +21,25 @@ const Footer = () => {
             <ul className="form-row certificate-row">
               <li className="col-4">
                 <div>
-                  <img src="/img/partner1.png" />
+                  <img src="/img/partner1.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/partner1.png" />
+                  <img src="/img/partner1.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/partner1.png" />
+                  <img src="/img/partner1.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/partner1.png" />
+                  <img src="/img/partner1.png" alt="" />
                 </div>
               </li>
             </ul>
@@ -49,37 +50,37 @@ const Footer = () => {
             <div className="bg-primary title-btm mb-3"></div>
             <ul className="footer-links form-row">
               <li className="col-md-6">
-                <a href="">About Us</a>
+                <Link to="">About Us</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Careers</a>
+                <Link to="">Careers</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Feedback</a>
+                <Link to="">Feedback</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Help and support</a>
+                <Link to="">Help and support</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Contact Us</a>
+                <Link to="">Contact Us</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Privacy</a>
+                <Link to="">Privacy</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Partnership</a>
+                <Link to="">Partnership</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Investor Relationships</a>
+                <Link to="">Investor Relationships</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Terms of Service</a>
+                <Link to="">Terms of Service</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Help and Support</a>
+                <Link to="">Help and Support</Link>
               </li>
               <li className="col-md-6">
-                <a href="">Safety and Trust</a>
+                <Link to="">Safety and Trust</Link>
               </li>
             </ul>
             <h5 className="mt-4">Company Certification brandings</h5>
@@ -88,25 +89,25 @@ const Footer = () => {
             <ul className="form-row certificate-row">
               <li className="col-4">
                 <div>
-                  <img src="/img/NASM-PNG.png" />
+                  <img src="/img/NASM-PNG.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/NASM-PNG.png" />
+                  <img src="/img/NASM-PNG.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/NASM-PNG.png" />
+                  <img src="/img/NASM-PNG.png" alt="" />
                 </div>
               </li>
 
               <li className="col-4">
                 <div>
-                  <img src="/img/NASM-PNG.png" />
+                  <img src="/img/NASM-PNG.png" alt="" />
                 </div>
               </li>
             </ul>
@@ -116,31 +117,31 @@ const Footer = () => {
             <h5>Letest Post</h5>
             <div className="bg-primary title-btm mb-3"></div>
             <div className="footer-post">
-              <img src="/img/blog2.jpg" />
+              <img src="/img/blog2.jpg" alt="" />
               <div>
-                <a href="" className="h5">
+                <Link to="" className="h5">
                   Pellentesque convallis, diam et feugiat volutpat
-                </a>
+                </Link>
                 <div className="date">April 19, 2020</div>
               </div>
             </div>
 
             <div className="footer-post">
-              <img src="/img/blog2.jpg" />
+              <img src="/img/blog2.jpg" alt="" />
               <div>
-                <a href="" className="h5">
+                <Link to="" className="h5">
                   Pellentesque convallis, diam et feugiat volutpat
-                </a>
+                </Link>
                 <div className="date">April 19, 2020</div>
               </div>
             </div>
 
             <div className="footer-post">
-              <img src="/img/blog2.jpg" />
+              <img src="/img/blog2.jpg" alt="" />
               <div>
-                <a href="" className="h5">
+                <Link to="" className="h5">
                   Pellentesque convallis, diam et feugiat volutpat
-                </a>
+                </Link>
                 <div className="date">April 19, 2020</div>
               </div>
             </div>
@@ -153,18 +154,18 @@ const Footer = () => {
             Mecca Fitness © 2020. All Rights Reserved
           </div>
           <div className="social-links">
-            <a href="" target="_blank">
+            <Link to="" target="_blank">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="" target="_blank">
+            </Link>
+            <Link to="" target="_blank">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="" target="_blank">
+            </Link>
+            <Link to="" target="_blank">
               <i className="fab fa-instagram"></i>
-            </a>
-            <a href="" target="_blank">
+            </Link>
+            <Link to="" target="_blank">
               <i className="fab fa-pinterest"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

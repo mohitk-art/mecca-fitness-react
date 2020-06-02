@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import CustomCard from '../../components/customcard';
 import Trainer from '../../components/trainer';
@@ -230,9 +231,9 @@ const Home = () => {
             );
           })}
         </div>
-        <a
+        <Link
           className="carousel-control-prev"
-          href="#bannerslider"
+          to="#bannerslider"
           role="button"
           data-slide="prev"
         >
@@ -241,10 +242,10 @@ const Home = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Previous</span>
-        </a>
-        <a
+        </Link>
+        <Link
           className="carousel-control-next"
-          href="#bannerslider"
+          to="#bannerslider"
           role="button"
           data-slide="next"
         >
@@ -253,7 +254,7 @@ const Home = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Next</span>
-        </a>
+        </Link>
       </div>
       <div className="position-absolute">
         <form className="search-form">
@@ -315,9 +316,9 @@ const Home = () => {
               normal distribution.
             </p>
 
-            <a href="" className="btn btn-primary rounded-0">
+            <Link href="" className="btn btn-primary rounded-0">
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -432,9 +433,9 @@ const Home = () => {
                         <h6>{item.title}</h6>
                         <h5>{item.subtitle}</h5>
                       </div>
-                      <a href="">
+                      <Link to="">
                         <i class="far fa-plus-square"></i>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 );
@@ -459,12 +460,12 @@ const Home = () => {
                   <div className="p-2">
                     <img src={item.image} className="w-100 mb-2" />
                     <div className="sub-title mb-2">{item.category}</div>
-                    <a href="" className="h5 d-block">
+                    <Link to="" className="h5 d-block">
                       {item.title}
-                    </a>
-                    <a href="" className="read-more">
+                    </Link>
+                    <Link to="" className="read-more">
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 );
               })}

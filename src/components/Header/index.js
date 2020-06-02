@@ -31,9 +31,9 @@ const Header = () => {
               onMouseOver={() => setDropdown(true)}
               onMouseOut={() => setDropdown(false)}
             >
-              <a
+              <Link
                 class="nav-link dropdown-toggle"
-                href="#"
+                to="#"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -41,7 +41,7 @@ const Header = () => {
                 aria-expanded="false"
               >
                 Get Fit
-              </a>
+              </Link>
               <div
                 className={
                   dropdown ? 'dropdown-menu show rounded-0' : 'dropdown-menu'
@@ -67,45 +67,45 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 Get Healthy
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 Get Events
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 Get Connected
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#latestblog">
+              <Link className="nav-link" to="#latestblog">
                 Articles
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 Mof Community
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 MyMoF
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="#">
                 Advertise
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="btn btn-light" href="#">
+              <Link className="btn btn-light" to="/loginsignup">
                 Sign up / Log in
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

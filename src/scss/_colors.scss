@@ -4,6 +4,12 @@
   color: $primaryColor !important;
 }
 
+a.text-primary {
+  &:hover {
+    color: $primaryColor !important;
+  }
+}
+
 .bg-yellow {
   background-color: #f1c204 !important;
 }
@@ -22,4 +28,20 @@
 
 .bg-black {
   background-color: #000 !important;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-google {
+  background-color: #db4437;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }

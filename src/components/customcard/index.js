@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CustomCard = ({ title, description, link, icon, image }) => {
   return (
@@ -8,18 +9,18 @@ const CustomCard = ({ title, description, link, icon, image }) => {
       {title ? <h5>{title}</h5> : ''}
       {description ? <p>{description}</p> : ''}
 
-      <a className="hover">
+      <Link className="hover">
         <div>
           {title ? <h5>{title}</h5> : ''}
           {link ? (
-            <a href={link}>
+            <Link to={link}>
               Read More <i className="fa fa-arrow-right"></i>
-            </a>
+            </Link>
           ) : (
             ''
           )}
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
