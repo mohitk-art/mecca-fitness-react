@@ -5,7 +5,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import App from './App';
+import App from './App';
 import Pages from './pages';
 
 import registerServiceWorker from './registerServiceWorker';
