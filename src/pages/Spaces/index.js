@@ -13,7 +13,10 @@ const Spaces = () => {
           <div className="row">
             <div className="col-md-8 pt-3">
               <h4 className="mb-2 font-weight-bold">Discover Spaces</h4>
-              <p className="mb-3 sub-title-s">Gym</p>
+              <div className="bg-primary title-btm mb-3"></div>
+              <div className="text-center">
+                <p className="sub-title-s sub-title1">Gym</p>
+              </div>
               <div className="form-row">
                 {spaceArray.map(item => {
                   return (
@@ -30,7 +33,10 @@ const Spaces = () => {
                 </Link>
               </div>
 
-              <p className="mb-3 sub-title-s">Massage</p>
+              <div className="text-center">
+                <p className="sub-title-s sub-title1">Massage</p>
+              </div>
+
               <div className="form-row">
                 {spaceArray.map(item => {
                   return (
@@ -47,7 +53,10 @@ const Spaces = () => {
                 </Link>
               </div>
 
-              <p className="mb-3 sub-title-s">Cycling</p>
+              <div className="text-center">
+                <p className="sub-title-s sub-title1">Cycling</p>
+              </div>
+
               <div className="form-row">
                 {spaceArray.map(item => {
                   return (

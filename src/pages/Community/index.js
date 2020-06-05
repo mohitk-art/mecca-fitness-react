@@ -5,6 +5,13 @@ import CommunityHeader from '../../components/Header/CommunityHeader';
 import SpaceSlider from '../../components/Community/SpaceSlide';
 import '../../scss/community.scss';
 import Post from '../../components/Community/Post';
+import massageimg from '../../img/massage.png';
+import pthysicaltherapyimg from '../../img/pthysicaltherapy.png';
+import crossfitimg from '../../img/crossfit.png';
+import cyclingimg from '../../img/cycling.png';
+import dietingimg from '../../img/dieting.png';
+import runimg from '../../img/run.png';
+import yogaimg from '../../img/yoga.png';
 
 const Community = () => {
   const spacesettings = {
@@ -34,7 +41,7 @@ const Community = () => {
       <div className="community-wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-md-2">
+            <div className="col-md-3 bg-white">
               <ul className="nav flex-column leftside-nav">
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
@@ -43,40 +50,47 @@ const Community = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={massageimg} className="icon" />
                     Massage
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={pthysicaltherapyimg} className="icon" />
                     Physical Therapy
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={yogaimg} className="icon" />
                     Yoga/Barres/Pilates
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={cyclingimg} className="icon" />
                     Cycling
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={runimg} className="icon" />
                     3k/5k/10k run
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={dietingimg} className="icon" />
                     Dieting
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
+                    <img src={crossfitimg} className="icon" />
                     Crossfit
                   </Link>
                 </li>
@@ -90,9 +104,7 @@ const Community = () => {
                   <img src="/img/person.jpg" className="boxavatar mr-2" />
                   Mohit Kumar
                 </div>
-                <h3 className="font-weight-bold">
-                  What is your question or link
-                </h3>
+                <h3 className="font-weight-bold">What is your question</h3>
               </div>
 
               <div className="box">
