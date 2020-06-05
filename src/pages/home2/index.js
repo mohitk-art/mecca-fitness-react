@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import CountUp from 'react-countup';
@@ -7,6 +7,8 @@ import Footer from '../../components/Footer';
 import '../../scss/style2.scss';
 
 const Home2 = () => {
+  const [searchtap, setSearchtap] = useState('fitness center');
+
   const settings = {
     dots: true,
     infinite: true,
@@ -118,41 +120,6 @@ const Home2 = () => {
     }
   ];
 
-  const fourboxes = [
-    {
-      title: 'FITNESS CENTERS',
-      icon: 'fas fa-dumbbell',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
-      link: '/',
-      image: '/img/aboutimage.jpg'
-    },
-    {
-      title: 'TRAINERS',
-      icon: '',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
-      link: '/',
-      image: 'img/blog3.jpg'
-    },
-    {
-      title: 'NUTRIONISTS',
-      icon: '',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
-      link: '/',
-      image: 'img/blog2.jpg'
-    },
-    {
-      title: 'FITNESS EVENTS',
-      icon: '',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crasullamcorper cursus malesuada',
-      link: '/',
-      image: 'img/blog4.jpg'
-    }
-  ];
-
   const trainers = [
     {
       name: 'Patrick Cortez',
@@ -240,9 +207,9 @@ const Home2 = () => {
             );
           })}
         </div>
-        <Link
+        <a
           className="carousel-control-prev"
-          to="#bannerslider"
+          href="#bannerslider"
           role="button"
           data-slide="prev"
         >
@@ -251,11 +218,11 @@ const Home2 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Previous</span>
-        </Link>
+        </a>
 
-        <Link
+        <a
           className="carousel-control-next"
-          to="#bannerslider"
+          href="#bannerslider"
           role="button"
           data-slide="next"
         >
@@ -264,45 +231,100 @@ const Home2 = () => {
             aria-hidden="true"
           ></span>
           <span className="sr-only">Next</span>
-        </Link>
+        </a>
       </div>
       <div className="position-absolute">
-        <form className="search-form">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search Here"
-          />
-          <button className="btn1">Serach</button>
-        </form>
+        <ul className="search-nav">
+          <li>
+            <a
+              className={searchtap === 'fitness center' ? 'active' : ''}
+              onClick={() => setSearchtap('fitness center')}
+            >
+              FITNESS CENTERS
+            </a>
+          </li>
+          <li>
+            <a
+              className={searchtap === 'trainers' ? 'active' : ''}
+              onClick={() => setSearchtap('trainers')}
+            >
+              TRAINERS
+            </a>
+          </li>
+          <li>
+            <a
+              className={searchtap === 'nutrionists' ? 'active' : ''}
+              onClick={() => setSearchtap('nutrionists')}
+            >
+              NUTRIONISTS
+            </a>
+          </li>
+          <li>
+            <a
+              className={searchtap === 'events' ? 'active' : ''}
+              onClick={() => setSearchtap('events')}
+            >
+              FITNESS EVENTS
+            </a>
+          </li>
+        </ul>
+
+        {searchtap === 'fitness center' ? (
+          <form className="search-form">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Fitness Center"
+            />
+            <button className="btn1">Serach</button>
+          </form>
+        ) : (
+          ''
+        )}
+
+        {searchtap === 'trainers' ? (
+          <form className="search-form">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Trainers"
+            />
+            <button className="btn1">Serach</button>
+          </form>
+        ) : (
+          ''
+        )}
+
+        {searchtap === 'nutrionists' ? (
+          <form className="search-form">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Nutrionists"
+            />
+            <button className="btn1">Serach</button>
+          </form>
+        ) : (
+          ''
+        )}
+
+        {searchtap === 'events' ? (
+          <form className="search-form">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Fitness Events"
+            />
+            <button className="btn1">Serach</button>
+          </form>
+        ) : (
+          ''
+        )}
       </div>
       {/* top banner end */}
 
-      {/* Four Boxes start */}
-      <div class="container four-boxes">
-        <div class="row">
-          {fourboxes.map(item => {
-            return (
-              <div class="col-md-3 mb-3">
-                <div
-                  className="customcard1 animated jackInTheBox"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                >
-                  <h5>{item.title}</h5>
-                  <p className="desc">{item.description}</p>
-                  <Link to="" className="btn">
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      {/* Four Boxes end */}
-
       {/* About Section start */}
-      <div className="container mb-5 about-section2">
+      <div className="container mb-5 about-section2 pt-5">
         <div className="row align-items-center">
           <div className="col-md-7 p-5 animated fadeInRight">
             <h2>We Are Here To Dream! Our Team Is Here Surve You.</h2>

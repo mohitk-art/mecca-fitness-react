@@ -1,18 +1,16 @@
+@import './mixins';
+
 .main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99999;
-  &.sticky {
-    background-color: #000 !important;
-    .navbar-toggler {
-      background-color: #fff !important;
-    }
-  }
+  background-color: #000;
+  color: #fff;
   .navbar-brand {
     img {
-      max-width: 200px;
+      max-width: 127px;
     }
   }
   .nav-item {
@@ -28,4 +26,8 @@
       background-color: #fff !important;
     }
   }
+}
+
+.top-space {
+  height: $headerHeight;
 }

@@ -1,5 +1,53 @@
 @import './mixins';
 
+.search-nav {
+  display: block;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 10px;
+
+    > a {
+      display: block;
+      position: relative;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: normal;
+      color: #fff !important;
+      padding: 10px;
+
+      &:not(:hover) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &.active {
+        &::before {
+          display: block;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 100%;
+        max-width: 40px;
+        background-color: $primaryColor;
+      }
+    }
+  }
+}
+
 .scaleup {
   transition: 0.5s;
   transform: scale(1, 1);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Trainer = ({ name, image, position, description }) => {
   return (
@@ -10,21 +11,21 @@ const Trainer = ({ name, image, position, description }) => {
         <div className="desc">
           <p>{description}</p>
           <div className="social-links">
-            <a href="" target="_blank">
+            <Link href="" target="_blank">
               <i className="fab fa-facebook-f"></i>
-            </a>
+            </Link>
 
-            <a href="" target="_blank">
+            <Link href="" target="_blank">
               <i className="fab fa-twitter"></i>
-            </a>
+            </Link>
 
-            <a href="" target="_blank">
+            <Link href="" target="_blank">
               <i className="fab fa-instagram"></i>
-            </a>
+            </Link>
 
-            <a href="" target="_blank">
+            <Link href="" target="_blank">
               <i className="fab fa-pinterest"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

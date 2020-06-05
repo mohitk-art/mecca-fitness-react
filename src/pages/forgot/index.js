@@ -4,8 +4,6 @@ import '../../scss/loginsignup.scss';
 import { Link } from 'react-router-dom';
 
 const Forgot = () => {
-  const [logintap, setLogintap] = useState(false);
-
   return (
     <>
       <LoginSignupHeader />
