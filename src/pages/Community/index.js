@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import CommunityHeader from '../../components/Header/CommunityHeader';
-
-import Userbox from '../../components/Community/Userbox';
 import SpaceSlider from '../../components/Community/SpaceSlide';
 import '../../scss/community.scss';
 import Post from '../../components/Community/Post';
@@ -109,9 +107,9 @@ const Community = () => {
                 </div>
 
                 <div className="text-center mt-3">
-                  <a href="" className="view-more">
+                  <Link className="view-more">
                     View More Spaces <i className="fa fa-chevron-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* Posts */}

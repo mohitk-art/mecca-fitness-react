@@ -155,6 +155,7 @@
 }
 
 .space-col {
+  background-color: #fff;
   position: relative;
   border-radius: 15px;
   border: 1px solid #ccc;
@@ -234,4 +235,9 @@
   &:hover {
     color: $primaryColor;
   }
+}
+
+.sub-title-s {
+  font-weight: bold;
+  color: $primaryColor;
 }
