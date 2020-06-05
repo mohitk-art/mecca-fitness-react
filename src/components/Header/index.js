@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logoimg from '../../img/logo.jpg';
 
@@ -33,7 +33,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/community">
                   Mof Community
                 </Link>
               </li>

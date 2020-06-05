@@ -274,7 +274,7 @@ const Home2 = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Fitness Center"
+              placeholder="Address, City, Zip, Neighborhood"
             />
             <button className="btn1">Serach</button>
           </form>
@@ -287,7 +287,7 @@ const Home2 = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Trainers"
+              placeholder="Address, City, Zip, Neighborhood"
             />
             <button className="btn1">Serach</button>
           </form>
@@ -300,7 +300,7 @@ const Home2 = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Nutrionists"
+              placeholder="Address, City, Zip, Neighborhood"
             />
             <button className="btn1">Serach</button>
           </form>
@@ -313,13 +313,17 @@ const Home2 = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Fitness Events"
+              placeholder="Address, City, Zip, Neighborhood"
             />
             <button className="btn1">Serach</button>
           </form>
         ) : (
           ''
         )}
+
+        {/* <GooglePlacesAutocomplete
+          onSelect={({ description }) => setAddress(description)}
+        /> */}
       </div>
       {/* top banner end */}
 

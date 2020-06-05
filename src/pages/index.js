@@ -6,6 +6,8 @@ import Home3 from './Home3';
 import Home4 from './Home4';
 import LoginSignup from './LoginSignup';
 import Forgot from './Forgot';
+import Community from './Community';
+import Spaces from './Spaces';
 
 const Pages = () => {
   return (
@@ -17,6 +19,8 @@ const Pages = () => {
         <Route exact path="/home4" component={Home4} />
         <Route exact path="/loginsignup" component={LoginSignup} />
         <Route exact path="/forgot" component={Forgot} />
+        <Route exact path="/community" component={Community} />
+        <Route exact path="/spaces" component={Spaces} />
       </Switch>
     </Router>
   );
