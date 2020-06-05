@@ -44,6 +44,11 @@ const Community = () => {
             <div className="col-md-2 px-0 pt-3">
               <ul className="nav flex-column leftside-nav">
                 <li className="nav-item">
+                  <Link className="nav-link active" to="#">
+                    <i className="fas fa-address-card mr-2"></i> Feed
+                  </Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="#">
                     <i className="fas fa-dumbbell mr-2"></i> Gyms
                   </Link>

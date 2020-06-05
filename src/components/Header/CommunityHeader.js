@@ -250,9 +250,16 @@ const CommunityHeader = () => {
               >
                 Cancle
               </span>
-              <button type="button" className="btn btn-primary rounded-pill">
-                Add Question
-              </button>
+
+              {adquestiontap ? (
+                <button type="button" className="btn btn-primary rounded-pill">
+                  Add Question
+                </button>
+              ) : (
+                <button type="button" className="btn btn-primary rounded-pill">
+                  Share Link
+                </button>
+              )}
             </div>
           </div>
         </div>
