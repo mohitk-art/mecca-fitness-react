@@ -71,12 +71,18 @@
 
   .leftside-nav {
     position: sticky;
-    top: 64px;
+    top: 74px;
 
     li {
       a {
         font-weight: 500;
         color: #000;
+        border-bottom: 2px solid transparent;
+
+        &:hover,
+        &.active {
+          border-bottom-color: #f23849;
+        }
 
         > i,
         .icon {
@@ -155,13 +161,13 @@
   .box-title {
     font-size: 20px;
   }
+}
 
-  .boxavatar {
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+.boxavatar {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .space-col {
@@ -248,7 +254,94 @@
 }
 
 .sub-title-s {
-  font-weight: 500;
+  font-weight: 600;
   color: #000;
+  line-height: 39px;
   font-size: 19px;
+  &::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: $primaryColor;
+    width: 30px;
+  }
+}
+
+.modal-nav {
+  a {
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+    border-bottom: 2px solid #f23849;
+
+    &:not(.active) {
+      border-color: transparent;
+    }
+  }
+}
+
+.qu-color--gray_light {
+  color: #939598;
+}
+
+.questioninput {
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  font-weight: 500;
+  box-shadow: none !important;
+  font-size: 14px;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.link-input {
+  position: relative;
+  > .form-control {
+    border: 0;
+    border-radius: 0;
+    font-size: 14px;
+    box-shadow: none !important;
+    padding-left: 30px;
+  }
+
+  > i {
+    position: absolute;
+    left: 9px;
+    top: 12px;
+  }
+}
+
+.share-dropdown {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  .btn1 {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #efeded;
+    border-radius: 32px;
+    border: 1px solid #adabab;
+  }
+  .dropdown-menu {
+    max-width: 400px;
+    font-size: 14px;
+  }
+
+  .serch-input {
+    position: relative;
+    padding: 0 10px;
+    > input {
+      border-radius: 0;
+      box-shadow: none;
+      padding-left: 30px;
+    }
+    > i {
+      position: absolute;
+      left: 20px;
+      top: 14px;
+    }
+  }
 }

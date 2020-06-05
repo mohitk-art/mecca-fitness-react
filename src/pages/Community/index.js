@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import CommunityHeader from '../../components/Header/CommunityHeader';
@@ -41,7 +41,7 @@ const Community = () => {
       <div className="community-wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-md-3 bg-white">
+            <div className="col-md-2 px-0 pt-3">
               <ul className="nav flex-column leftside-nav">
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
@@ -104,7 +104,13 @@ const Community = () => {
                   <img src="/img/person.jpg" className="boxavatar mr-2" />
                   Mohit Kumar
                 </div>
-                <h3 className="font-weight-bold">What is your question</h3>
+                <h5
+                  className="font-weight-bold qu-color--gray_light"
+                  data-toggle="modal"
+                  data-target="#addquestionModal"
+                >
+                  What is your question ?
+                </h5>
               </div>
 
               <div className="box">

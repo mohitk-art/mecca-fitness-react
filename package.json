@@ -2,6 +2,7 @@
   "name": "react-free-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mecca-fitness.web.app/",
   "// If You want to install mdbreact from our GitLab repository, please replace '4.25.4' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
   "dependencies": {
     "mdbreact": "4.25.4",
