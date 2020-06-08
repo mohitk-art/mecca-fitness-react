@@ -98,7 +98,7 @@
   }
 
   .box {
-    border: 1px solid #d8d8d8;
+    border: 1px solid #e8e8e8;
     background-color: #fff;
     margin-bottom: 10px;
     padding: 15px;
@@ -174,9 +174,10 @@
   background-color: #fff;
   position: relative;
   border-radius: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #e8e8e8;
   overflow: hidden;
   text-align: center;
+  color: #000;
 
   > .fa-times {
     position: absolute;

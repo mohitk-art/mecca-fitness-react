@@ -5,9 +5,42 @@ import CountUp from 'react-countup';
 import Slider from 'react-slick';
 import Footer from '../../components/Footer';
 import '../../scss/style2.scss';
+import SpaceSlide from '../../components/Community/SpaceSlide';
+import {
+  BlogsData,
+  TestimonialsData,
+  TopBannerData,
+  TrainersData,
+  ProgramsData
+} from '../../Data';
+import AboutSection from './AboutSection';
+import Trainer2 from '../../components/Home/Trainer2';
+import TestimonialSlide from '../../components/Home/TestimonialSlide';
+import ProgramSlide from '../../components/Home/ProgramSlide';
 
 const Home2 = () => {
   const [searchtap, setSearchtap] = useState('fitness center');
+
+  const SpaceSiderArray = [1, 3, 4, 3, 3];
+
+  const spacesettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  };
 
   const settings = {
     dots: true,
@@ -55,125 +88,6 @@ const Home2 = () => {
     slidesToScroll: 1
   };
 
-  const blogs = [
-    {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      image: 'img/portfolio1.jpg',
-      category: 'GET FIT'
-    },
-    {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing eli',
-      image: 'img/blog3.jpg',
-      category: 'GET Trained'
-    },
-    {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      image: 'img/blog2.jpg',
-      category: 'GET Healthy'
-    },
-    {
-      title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      image: 'img/blog4.jpg',
-      category: 'GET Motivated (member stories)'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Patrick Cortez',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      position: 'Leader',
-      image: '/img/person.jpg'
-    },
-    {
-      name: 'Patrick Cortez',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      position: 'Leader',
-      image: '/img/person.jpg'
-    },
-    {
-      name: 'Patrick Cortez',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      position: 'Leader',
-      image: '/img/person.jpg'
-    }
-  ];
-
-  const topbanner = [
-    {
-      title: 'The Journey Begins Here',
-      image: 'img/banner1.jpg',
-      subtitle: 'Motivational Energy Continuously Creating Achievement'
-    },
-    {
-      title: 'The Journey Begins Here',
-      image: 'img/portfolio4.jpg',
-      subtitle: 'Motivational Energy Continuously Creating Achievement'
-    },
-    {
-      title: 'The Journey Begins Here',
-      image: 'img/portfolio2.jpg',
-      subtitle: 'Motivational Energy Continuously Creating Achievement'
-    }
-  ];
-
-  const trainers = [
-    {
-      name: 'Patrick Cortez',
-      image: '/img/trainer1.jpg',
-      position: 'Leader',
-      description:
-        'non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
-    },
-    {
-      name: 'Patrick Cortez',
-      image: '/img/trainer1.jpg',
-      position: 'Leader',
-      description:
-        'non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
-    },
-    {
-      name: 'Patrick Cortez',
-      image: '/img/trainer1.jpg',
-      position: 'Leader',
-      description:
-        'non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
-    },
-    {
-      name: 'Patrick Cortez',
-      image: '/img/trainer1.jpg',
-      position: 'Leader',
-      description:
-        'non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
-    }
-  ];
-
-  const programs = [
-    {
-      image: 'img/portfolio4.jpg',
-      title: 'Bodybuilding',
-      subtitle: 'Bodybuilding Training Session'
-    },
-    {
-      image: 'img/portfolio1.jpg',
-      title: 'Boxing',
-      subtitle: 'Boxing Training Session'
-    },
-    {
-      image: 'img/portfolio2.jpg',
-      title: 'Cardio Training',
-      subtitle: 'Cardio Training Session'
-    },
-    {
-      image: 'img/portfolio3.jpg',
-      title: 'Yoga',
-      subtitle: 'Yoga Training Session'
-    }
-  ];
-
   return (
     <>
       <Header />
@@ -183,14 +97,14 @@ const Home2 = () => {
         <div className="carousel-inner">
           <div
             className="carousel-item active text-center bg-cover bg-overlay text-white"
-            style={{ backgroundImage: `url(${topbanner[0].image})` }}
+            style={{ backgroundImage: `url(${TopBannerData[0].image})` }}
           >
             <div>
-              <h1 class="mb-4 fadeInLeft animated">{topbanner[0].title}</h1>
-              <h3 class="fadeInRight animated">{topbanner[0].subtitle}</h3>
+              <h1 class="mb-4 fadeInLeft animated">{TopBannerData[0].title}</h1>
+              <h3 class="fadeInRight animated">{TopBannerData[0].subtitle}</h3>
             </div>
           </div>
-          {topbanner.map((item, i) => {
+          {TopBannerData.map((item, i) => {
             if (i === 0) {
               return null;
             }
@@ -320,40 +234,11 @@ const Home2 = () => {
         ) : (
           ''
         )}
-
-        {/* <GooglePlacesAutocomplete
-          onSelect={({ description }) => setAddress(description)}
-        /> */}
       </div>
       {/* top banner end */}
 
       {/* About Section start */}
-      <div className="container mb-5 about-section2 pt-5">
-        <div className="row align-items-center">
-          <div className="col-md-7 p-5 animated fadeInRight">
-            <h2>We Are Here To Dream! Our Team Is Here Surve You.</h2>
-            <div className="sub-title">About us</div>
-            <p>
-              At vero eos et accusamus et iusto odio digni goikussimos ducimus
-              qui to bonfoe blanditiis praese. Ntium voluum deleniti atque
-              corrupti quos. of a page a reload when looking at its layout. The
-              point of using Lorem Ipsum is that it has pi motive re-or-less
-              normal distribution.
-            </p>
-
-            <Link to="" className="btn btn-primary">
-              Read More
-            </Link>
-          </div>
-
-          <div className="col-md-5 animated fadeInLeft">
-            <div className="two-images">
-              <img src="img/portfolio2.jpg" className="w-100 shadow" />
-              <img src="img/portfolio4.jpg" className="w-100 shadow" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <AboutSection />
       {/* About Section end */}
 
       {/* Trainers start */}
@@ -367,33 +252,14 @@ const Home2 = () => {
             <span class="sub-title1">train with experts</span>
           </div>
           <div className="row">
-            {trainers.map(item => {
+            {TrainersData.map(item => {
               return (
                 <div className="col-md-3 mb-3">
-                  <div className="shadow p-3 trainer2 scaleup">
-                    <img src={item.image} className="shadow mb-3" />
-                    <h5>{item.name}</h5>
-                    <div className="font-weight-normal text-primary mb-3">
-                      {item.position}
-                    </div>
-                    <div className="social-links">
-                      <Link to="" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </Link>
-
-                      <Link to="" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </Link>
-
-                      <Link to="" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </Link>
-
-                      <Link to="" target="_blank">
-                        <i className="fab fa-pinterest"></i>
-                      </Link>
-                    </div>
-                  </div>
+                  <Trainer2
+                    image={item.image}
+                    name={item.name}
+                    position={item.position}
+                  />
                 </div>
               );
             })}
@@ -440,6 +306,29 @@ const Home2 = () => {
       </section>
       {/* Trainers end */}
 
+      {/* Community Start */}
+      <div
+        className="community-section"
+        style={{ backgroundImage: 'url(/img/community.jpeg)' }}
+      >
+        <div className="container">
+          <h2>Welcome to Community</h2>
+
+          <div className="spaceslider">
+            <Slider {...spacesettings}>
+              {SpaceSiderArray.map(item => {
+                return <SpaceSlide />;
+              })}
+            </Slider>
+          </div>
+
+          <Link to="/community" className="btn btn-primary mt-3">
+            Connect Here
+          </Link>
+        </div>
+      </div>
+      {/* Cummunity end */}
+
       {/* testimonials start */}
       <div className="testimonials-section">
         <div className="container">
@@ -453,25 +342,15 @@ const Home2 = () => {
 
           <div className="testimonals-slider1">
             <Slider {...settings}>
-              {testimonials.map(item => {
+              {TestimonialsData.map(item => {
                 return (
-                  <div className="text-center bg-white p-5 shadow scaleup">
-                    <div className="avatar">
-                      <i className="fa fa-quote-right"></i>
-                      <img src={item.image} className="img" />
-                    </div>
-                    <h5>{item.name}</h5>
-                    <h6 className="text-primary">{item.position}</h6>
-                    <p>{item.description}</p>
-
-                    <div className="raiting">
-                      <i className="far fa-star"></i>
-                      <i className="far fa-star"></i>
-                      <i className="far fa-star"></i>
-                      <i className="far fa-star"></i>
-                      <i className="far fa-star"></i>
-                    </div>
-                  </div>
+                  <TestimonialSlide
+                    name={item.name}
+                    image={item.image}
+                    position={item.position}
+                    description={item.description}
+                    raiting={4}
+                  />
                 );
               })}
             </Slider>
@@ -489,20 +368,14 @@ const Home2 = () => {
         <div class="programs-slider-wrapper">
           <div class="programs-slider">
             <Slider {...settings1}>
-              {programs.map(item => {
+              {ProgramsData.map(item => {
                 return (
-                  <div class="position-relative">
-                    <img src={item.image} class="w-100" />
-                    <div class="position-absolute">
-                      <div>
-                        <h6>{item.title}</h6>
-                        <h5>{item.subtitle}</h5>
-                      </div>
-                      <Link to="">
-                        <i class="far fa-plus-square"></i>
-                      </Link>
-                    </div>
-                  </div>
+                  <ProgramSlide
+                    image={item.image}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    href="/"
+                  />
                 );
               })}
             </Slider>
@@ -520,7 +393,7 @@ const Home2 = () => {
           </div>
           <div className="blog-slider1">
             <Slider {...blogsettings}>
-              {blogs.map(item => {
+              {BlogsData.map(item => {
                 return (
                   <div className="slide">
                     <img src={item.image} className="w-100 mb-2" />

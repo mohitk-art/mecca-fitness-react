@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import CustomCard from '../../components/Customcard';
-import Trainer from '../../components/Trainer';
+import Trainer from '../../components/Home/Trainer';
 import Slider from 'react-slick';
 import CountUp from 'react-countup';
 import Footer from '../../components/Footer';

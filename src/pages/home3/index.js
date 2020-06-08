@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import CountUp from 'react-countup';
 import Slider from 'react-slick';

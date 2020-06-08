@@ -57,36 +57,6 @@
   }
 }
 
-.customcard1 {
-  position: relative;
-  padding: 25px;
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
-  text-align: center;
-  &::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0.6;
-    background-color: #000;
-  }
-  > * {
-    position: relative;
-  }
-  .btn {
-    border-radius: 0;
-    background-color: $primaryColor;
-    &:hover {
-      background-color: #fff;
-      color: #000;
-    }
-  }
-}
-
 .about-section2 {
   h2 {
     font-size: 46px;
@@ -129,7 +99,14 @@
 // Trainer end
 
 // testimonals-slider1 start
+
 .testimonals-slider1 {
+  .slick-slide {
+    padding: 20px 15px;
+  }
+}
+
+.testimonals-slide {
   .avatar {
     position: relative;
     width: 100px;
@@ -161,10 +138,6 @@
   .raiting {
     color: gold;
     font-size: 16px;
-  }
-
-  .slick-slide {
-    padding: 20px 15px;
   }
 }
 // testimonals-slider1 end
@@ -220,3 +193,55 @@
   }
 }
 // blog-slider1 end
+
+// Community Start
+.community-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+
+  > .container {
+    max-width: 870px;
+  }
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #0003;
+  }
+
+  > * {
+    position: relative;
+  }
+
+  h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    line-height: 78px;
+
+    &::after {
+      content: '';
+      height: 3px;
+      width: 100%;
+      display: block;
+      max-width: 100px;
+      margin: auto;
+      background-color: $primaryColor;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+// Community end

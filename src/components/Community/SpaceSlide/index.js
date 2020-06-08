@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SpaceSlider = () => {
+const SpaceSlide = () => {
   return (
     <div className="space-col">
       <i className="fa fa-times"></i>
@@ -23,4 +23,4 @@ const SpaceSlider = () => {
   );
 };
 
-export default SpaceSlider;
+export default SpaceSlide;
