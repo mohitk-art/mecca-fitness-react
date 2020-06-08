@@ -17,6 +17,7 @@ import AboutSection from './AboutSection';
 import Trainer2 from '../../components/Home/Trainer2';
 import TestimonialSlide from '../../components/Home/TestimonialSlide';
 import ProgramSlide from '../../components/Home/ProgramSlide';
+import BlogSlide from '../../components/Home/BlogSlide';
 
 const Home2 = () => {
   const [searchtap, setSearchtap] = useState('fitness center');
@@ -395,21 +396,12 @@ const Home2 = () => {
             <Slider {...blogsettings}>
               {BlogsData.map(item => {
                 return (
-                  <div className="slide">
-                    <img src={item.image} className="w-100 mb-2" />
-                    <div className="p-3 shadow">
-                      <span className="badge badge-primary d-inline-block">
-                        {item.category}
-                      </span>
-
-                      <Link to="" className="h5 d-block">
-                        {item.title}
-                      </Link>
-                      <Link to="" className="read-more">
-                        Read More
-                      </Link>
-                    </div>
-                  </div>
+                  <BlogSlide
+                    image={item.image}
+                    title={item.title}
+                    category={item.category}
+                    href="/"
+                  />
                 );
               })}
             </Slider>

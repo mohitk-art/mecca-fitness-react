@@ -150,48 +150,47 @@
 // training-programs2 end
 
 // blog-slider1 start
-.blog-slider1 {
-  .slide {
-    padding: 20px 15px;
+.blog-slide {
+  padding: 20px 15px;
 
-    > img {
-      height: 200px;
-      object-fit: cover;
-    }
+  > img {
+    height: 200px;
+    object-fit: cover;
+  }
 
-    > div {
-      position: relative;
-      background-color: #fff;
-      max-width: calc(100% - 26px);
-      margin: auto;
-      margin-top: -60px;
+  > div {
+    position: relative;
+    background-color: #fff;
+    max-width: calc(100% - 26px);
+    margin: auto;
+    margin-top: -60px;
+    transition: 0.5s;
+    &:hover {
+      margin-top: -80px;
       transition: 0.5s;
-      &:hover {
-        margin-top: -80px;
-        transition: 0.5s;
-      }
     }
+  }
 
-    a.h5 {
-      color: #000;
-      display: block;
-      font-size: 15px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      &:hover {
-        color: $primaryColor;
-      }
+  a.h5 {
+    color: #000;
+    display: block;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &:hover {
+      color: $primaryColor;
     }
+  }
 
-    a.read-more {
-      font-weight: 500;
-      color: #000;
-      &:hover {
-        color: $primaryColor;
-      }
+  a.read-more {
+    font-weight: 500;
+    color: #000;
+    &:hover {
+      color: $primaryColor;
     }
   }
 }
+
 // blog-slider1 end
 
 // Community Start
